@@ -1,6 +1,7 @@
 package covid.back.kandidat.rest.resources;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ws.rs.GET;
@@ -20,9 +21,10 @@ public class locationResources {
 	@GET
 	@Path("/{timestamp}")
 	@Produces(MediaType.TEXT_PLAIN)
-	public List<Location> GetLocations(@PathParam ("timestamp")LocalDateTime timestamp) {
+	public ArrayList<Location> GetLocations(@PathParam ("timestamp")String timestamp) {
 		
-		return locationservice.GetLocations(timestamp);
+	ArrayList<Location> listLocation;
+	return listLocation=locationservice.getAllLocations(timestamp);
 	}
 
 }
