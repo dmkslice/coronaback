@@ -8,7 +8,7 @@ import covid.back.kandidat.rest.model.Location;
 public class Locationservice {
 	
 	
-	public List<Location> GetLocations(LocalDateTime regTime){	
+	public List<Location> GetLocations(String regTime){	
 		
 		return null;
 		
